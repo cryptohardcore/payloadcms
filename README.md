@@ -78,6 +78,8 @@ pnpm run deploy
 
 This will spin up Wrangler in `production` mode, run any created migrations, build the app and then deploy the bundle up to Cloudflare.
 
+If you move these steps into your CI pipeline, make sure the deploy step activates the new Worker version. For an immediate production release, use `pnpm run deploy` or `npx wrangler deploy`. Do not use `npx wrangler versions upload` by itself for production deploys: that command only uploads an inactive Worker version, so live traffic will keep serving the previous homepage until the uploaded version is deployed with `wrangler versions deploy` or through the Cloudflare dashboard.
+
 That's it! You can if you wish move these steps into your CI pipeline as well.
 
 ## Enabling logs
@@ -117,3 +119,5 @@ This also applies to your own code, in the case of importing a lot of libraries 
 ## Questions
 
 If you have any issues or questions, reach out to us on [Discord](https://discord.com/invite/payload) or start a [GitHub discussion](https://github.com/payloadcms/payload/discussions).
+
+by Konstantin
