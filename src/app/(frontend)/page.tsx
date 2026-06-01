@@ -2,21 +2,6 @@ import React from 'react'
 
 import './styles.css'
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
-
-const events = [
-  { date: 'May 30', title: 'Old Town Night Market', location: 'Phuket Town' },
-  { date: 'Jun 2', title: 'Sunset Beach Yoga', location: 'Kata Beach' },
-  { date: 'Jun 5', title: 'Andaman Seafood Festival', location: 'Rawai Pier' },
-]
-
-const featuredArticles = [
-  '7 hidden beaches locals still love in low season',
-  'How to island-hop from Phuket in one weekend',
-  'Best family-friendly cafés with ocean views',
-]
-
 const events = [
   { date: 'May 30', title: 'Old Town Night Market', location: 'Phuket Town' },
   { date: 'Jun 2', title: 'Sunset Beach Yoga', location: 'Kata Beach' },
